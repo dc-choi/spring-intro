@@ -1,6 +1,14 @@
 package com.example.springintro.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Member {
+    // 기본키 생성을 DB에게 위임한다.(MySQL은 AUTO INCREMENT) 즉, 특정 DB 벤더에 의존적이다.
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 

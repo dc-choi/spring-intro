@@ -5,10 +5,12 @@ import com.example.springintro.repository.MemberRepository;
 import com.example.springintro.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
 // @Service
+@Transactional
 public class MemberService {
     private final MemberRepository repository;
 
